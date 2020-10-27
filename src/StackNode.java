@@ -21,7 +21,7 @@ public class StackNode<E>{
     }
 
     public E pop(){
-        if(next.isEmpty){
+        if(next.isEmpty()){
             System.out.println("Stack is Empty");
         }
         E top = element;
@@ -33,6 +33,10 @@ public class StackNode<E>{
 
     public boolean isEmpty(){
         return element == null;
+    }
+
+    public E peek(){
+        return element;
     }
 
 }
