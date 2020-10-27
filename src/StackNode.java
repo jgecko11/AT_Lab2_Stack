@@ -9,8 +9,15 @@
 
 public class StackNode<E>{
 
-    private E e;
+    private StackNode<E> next;
+    private E element;
 
     StackNode(){}
+
+    public void push(E element){
+        next = new StackNode<E>();
+        this.element = element;
+        
+    }
 
 }
