@@ -31,4 +31,8 @@ public class StackNode<E>{
         return top;
     }
 
+    public boolean isEmpty(){
+        return element == null;
+    }
+
 }
