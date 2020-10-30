@@ -7,15 +7,15 @@
  * @param <E>
  */
 
-public class StackNode<E>{
+public class Stack<E>{
 
-    private StackNode<E> next = new StackNode<>();
+    private Stack<E> next = new Stack<>();
     private E element;
 
-    StackNode(){}
+    Stack(){}
 
     public void push(E element){
-        next = new StackNode<E>();
+        next = new Stack<E>();
         this.element = element;
         
     }
