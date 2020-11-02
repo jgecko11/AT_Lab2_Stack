@@ -7,40 +7,30 @@
  * @param <E>
  */
 
-public class Stack<E>{
+public class StackNode<E> {
 
-    private Stack<E> next = new Stack<>();
-    private E element;
 
-    Stack(){}
+    private E data;
+    private E childNode;
 
-    public void push(E element){
-        next = new Stack<E>();
-        this.element = element;
-        
+    StackNode() {
     }
 
-    public E pop(){
-        if(next.isEmpty()){
-            System.out.println("Stack is Empty");
-        }
-        E top = element;
-        element = next.element;
-        next = next.next;
-
-        return top;
+    public void setData(E data) {
+        this.data = data;
     }
 
-    public boolean isEmpty(){
-        return element == null;
+    public void setChildNode(E childNode) {
+        this.childNode = childNode;
     }
 
-    public E peek(){
-        return element;
+    public E getData() {
+        return data;
     }
 
-    public int size(){
-        return this.isEmpty() ? 0 : 1 + this.next.size(); //recursion?? lets see if it works
+    public E getChildNode() {
+        return childNode;
     }
-
 }
+
+
